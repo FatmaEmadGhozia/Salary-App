@@ -64,15 +64,21 @@
             color: var(--primary-navy-hover);
 
         }
+
         .info {
+            background-color: rgb(175, 104, 104);
+            width: 350px;
+            height: 200px;
             background-color: white;
-            width: 400px;
-            height: 400px;
+
+        }
+        .info p:last-of-type {
+            margin-top: -15px;
         }
     </style>
 </head>
 
-<body>
+<body style="background-color: var(--bg-page);">
 
     <nav class="navbar navbar-expand-lg ">
         <div class=" contain container-fluid p-2">
@@ -124,7 +130,7 @@
                     </div>
                     <div class="d-flex align-items-center gap-5 mt-4 fs-4 rounded-2 text-light">
                         <div class="emp-num  rounded-2 p-3  bg-light text-dark ">
-                          
+
                             <span class="d-block ">Export Report</span>
                         </div>
                         <!-- <div class="total-net rounded-2 p-2 text-center fs-4 text-light">
@@ -137,11 +143,31 @@
 
 
             </div>
-            <div class="emp-info mt-4">
-                <div class="info"></div>
-                <div class="info"></div>
-                <div class="info"></div>
-                <div class="info"></div>
+
+            <div class="row emp-info mt-4 mx-4 gap-4 justify-content-between ">
+                <div class="info col-6 col-lg-6 p-4 rounded-4 ">
+                    <div class="stat-icon mb-2 p-3 rounded-3 text-center " style="background:var(--primary-blue-tint); font-size:22px;width: fit-content; height: fit-content; ;">👥</div>
+                    <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">0</p>
+                    <p class="fs-5">Total Empoloyess</p>
+                </div>
+                <div class="info col-6 p-4 rounded-4 ">
+                    <div class="stat-icon mb-2 p-3 rounded-3 text-center " style="background:var(--green-tint); font-size:22px;width: fit-content; height: fit-content; ;">💰</div>
+                    <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
+                    <p class="fs-5">Total Gross Payroll</p>
+                </div>
+                <div class="info col-6 p-4 rounded-4 ">
+                    <div class="stat-icon mb-2 p-3 rounded-3 text-center " style="background:var(--amber-tint); font-size:22px;width: fit-content; height: fit-content; ;">⭐</div>
+                    <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
+                    <p class="fs-5">Total Bonuses</p>
+                </div>
+                <div class="info col-6 p-4 rounded-4 ">
+                    <div class="stat-icon mb-2 p-3 rounded-3 text-center " style="background:var(--primary-blue-tint); font-size:22px;width: fit-content; height: fit-content; ;">💵</div>
+                    <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
+                    <p class="fs-5">Total Net Salary</p>
+                </div>
+                
+                
+                
 
             </div>
 
