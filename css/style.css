@@ -3,3 +3,55 @@
 body {
     font-family: 'Rajdhani', sans-serif;
 }
+
+:root {
+    /* ── Primary ── */
+    --primary-navy:        #0C447C;
+    --primary-navy-hover:  #185FA5;
+    --primary-blue:        #378ADD;
+    --primary-blue-light:  #85B7EB;
+    --primary-blue-tint:   #E6F1FB;
+    --primary-blue-avatar: #B5D4F4;
+
+    /* ── Backgrounds ── */
+    --bg-page:         #f1efe8;
+    --bg-card:         #ffffff;
+    --bg-table-header: #f8f9fa;
+    --bg-table-hover:  #f0f6ff;
+
+    /* ── Success / Green ── */
+    --green-dark:   #0F6E56;
+    --green-mid:    #1D9E75;
+    --green-light:  #5DCAA5;
+    --green-tint:   #E1F5EE;
+    --green-avatar: #C0DD97;
+
+    /* ── Danger / Red ── */
+    --red-dark:        #A32D2D;
+    --red-mid:         #E24B4A;
+    --red-light:       #F09595;
+    --red-tint:        #FCEBEB;
+    --red-admin-badge: #c0392b;
+
+    /* ── Warning / Amber ── */
+    --amber-dark:        #854F0B;
+    --amber-mid:         #EF9F27;
+    --amber-avatar:      #FAC775;
+    --amber-tint:        #FAEEDA;
+    --amber-avatar-dark: #633806;
+
+    /* ── Job Badges / Avatars ── */
+    --purple-tint:        #EEEDFE;
+    --purple-dark:        #3C3489;
+    --purple-avatar:      #CECBF6;
+    --pink-avatar:        #F4C0D1;
+    --pink-avatar-dark:   #72243E;
+    --teal-avatar:        #9FE1CB;
+
+    /* ── Text & Neutral ── */
+    --text-primary:   #222222;
+    --text-secondary: #666666;
+    --text-muted:     #888888;
+    --border-color:   #dddddd;
+    --text-on-navy:   #E6F1FB;
+}

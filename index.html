@@ -14,6 +14,10 @@
         :root {
             --primaryColor: #0C447C;
             --secondaryColor: #378ADD;
+            --primary-navy-hover: #185FA5;
+            --primary-blue-light: #85B7EB;
+            --primary-blue-tint: #E6F1FB;
+            --primary-blue-avatar: #B5D4F4;
         }
 
         .contain img {
@@ -41,6 +45,30 @@
             color: #F09595;
             background: rgba(226, 75, 74, 0.2);
         }
+
+        .emp-num,
+        .total-net {
+            width: 200px;
+            background-color: var(--secondaryColor);
+            height: fit-content;
+            width: fit-content;
+            font-weight: 500;
+        }
+
+        .emp-num span:last-of-type,
+        .total-net span:last-of-type {
+            margin-top: -10px;
+        }
+
+        .admin-dashboard {
+            color: var(--primary-navy-hover);
+
+        }
+        .info {
+            background-color: white;
+            width: 400px;
+            height: 400px;
+        }
     </style>
 </head>
 
@@ -55,8 +83,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class=" list collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll border border-danger gap-3"
-                    style="--bs-scroll-height: 100px;">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll gap-3" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
                         <a class="nav-link active text-white fs-3" aria-current="page" href="#">DashBoard</a>
                     </li>
@@ -77,19 +104,48 @@
                         <a class="nav-link disabled text-white fs-3" aria-disabled="true">Settings</a>
                     </li>
                 </ul>
-                <!-- <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> -->
+
                 <div class="d-flex justify-content-center gap-3 me-3">
                     <i class="bi bi-bell fs-3 text-white"></i>
-                    <div class=" role  rounded p-1  d-inline-block fs-4">Admin</div>
-                    <div class="profile text-white p-2 fs-5 fw-bold rounded-circle d-inline-block">FA</div>
+                    <div class=" role  rounded-3 p-1  d-inline-block fs-4">Admin</div>
+                    <div class="profile text-white p-1 fs-5 fw-bold rounded-circle d-inline-block">FA</div>
 
                 </div>
             </div>
         </div>
     </nav>
+    <main>
+        <div class="main-container">
+            <div class="main-header">
+                <div class="main-description d-flex justify-content-between px-4">
+                    <div>
+                        <h2 class=" admin-dashboard mb-1 mt-4 fs-1 fw-bold">Admin Dashboard</h2>
+                        <p class="fs-4">Tuesday, March 17, 2026 · Q1 Payroll Period</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-5 mt-4 fs-4 rounded-2 text-light">
+                        <div class="emp-num  rounded-2 p-3  bg-light text-dark ">
+                          
+                            <span class="d-block ">Export Report</span>
+                        </div>
+                        <!-- <div class="total-net rounded-2 p-2 text-center fs-4 text-light">
+                            <span class="d-block"> $14,500</span>
+                            <span class="d-block">Total Net</span>
+                        </div> -->
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="emp-info mt-4">
+                <div class="info"></div>
+                <div class="info"></div>
+                <div class="info"></div>
+                <div class="info"></div>
+
+            </div>
+
+    </main>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
