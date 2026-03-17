@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        :root {
+            --primaryColor: #0C447C;
+            --secondaryColor: #378ADD;
+        }
+        /* body {
+            background: #f1efe8;
+        } */
+     
+        .row-container {
+            box-shadow: 6px 4px 8px rgba(29, 29, 29, 0.441);
+            overflow: hidden;
+            width: 85%;
+        }
+
+        .logo img {
+            width: 140px;
+            height: 55px;
+
+        }
+
+        .leftSide-login {
+            background-color: var(--primaryColor);
+        }
+
+        .leftSide-login h1 {
+            font-size: 50px;
+        }
+
+        .prop {
+            background-color: #378add87;
+        }
+
+        .leftSide-footer p:last-of-type {
+            margin-top: -23px;
+            color: var(--secondaryColor);
+        }
+        .rightSide-login{
+            padding: 100px 50px;
+            background-color: white;
+        }
+        .forgot-pass {
+            color: var(--secondaryColor);
+            margin-left: auto;
+            
+        }
+        #name,#pass {
+            border: 2px solid rgba(0, 0, 0, 0.142);
+        }
+        .contact {
+            color: var(--secondaryColor);
+            font-weight: bold;
+        }
+        .btn-outline-custom:hover {
+            background-color:#4aa1f96e;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="container  vh-100 d-flex justify-content-center align-items-center">
+        <div class=" row-container row justify-content-center border rounded ">
+
+            <div class="leftSide-login   vh-70 p-5 col-6">
+                <div class="logo d-flex mb-5 ">
+                    <img src="./images/salaryos-logo (1).png" alt="">
+                    <!-- <p class="text-white">SalaryOS</p> -->
+                </div>
+                <h1 class="text-white mt-2 mb-4">Manage <br>payroll with <br>precision</h1>
+                <p style="color:var(--secondaryColor)" class="fs-4 mt-2 ">A complete salary management platform for HR
+                    teams and finance departments.</p>
+                <div class="props   d-flex flex-wrap gap-3 mb-5 mt-2">
+                    <div class="prop text-white border rounded p-1 border-0 fs-5">Secure</div>
+                    <div class="prop text-white  border rounded p-1 border-0 fs-5">Real-time</div>
+                    <div class="prop text-white border rounded p-1 border-0 fs-5">Multi-currency</div>
+                </div>
+                <div class="leftSide-footer">
+                    <p class="text-white fs-1 fw-bold">4,200+</p>
+                    <p class="text-white fs-4">Employees managed</p>
+                </div>
+
+            </div>
+            <div class="rightSide-login  w-60  vh-70 col-6 ">
+                <h2 class="fs-1 fw-bold">Welcome back</h2>
+                <p class="fs-3 mb-5">Sign in to access your payroll dashboard</p>
+                <form action="" validate>
+                    <label for="name" class="d-block mb-2 fs-5">USERNAME</label>
+                    <input type="text" name="username" id="name" class="d-block form-control mb-3 fs-4 text-secondray p-2 ps-3  " placeholder="Enter your username" required>
+                    <label for="pass" class="d-block mb-2 fs-5">Password</label>
+                    <input type="password" name="password" id="pass" class="d-block form-control fs-4 text-secondray" placeholder="Enter your Password" required>
+                    <p class="forgot-pass mt-1 fs-5 d-flex justify-content-end fw-bold">Forgot password?</p>
+                    <button type="submit" id="btn" class="btn btn-outline-custom btn-lg col-12 mb-4 mt-3 text-dark fs-4 fw-bold border border-dark">Sign in</button>
+                    <p class="text-center fs-5"><span>Need access?</span> <span class="contact">Contact your administrator </span></p>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
