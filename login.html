@@ -58,19 +58,23 @@
             color: var(--secondaryColor);
             font-weight: bold;
         }
-        .btn-outline-custom:hover {
-            background-color:#4aa1f96e;
+        .btn {
+            background: var(--primaryColor);
             border: 0;
+        }
+        .btn:hover {
+            background-color:#0c447cdf;
+            
         }
     </style>
 </head>
 
 <body class="bg-light">
 
-    <div class="container  vh-100 d-flex justify-content-center align-items-center">
-        <div class=" row-container row justify-content-center border rounded ">
+    <div class="container  min-vh-100 border border-danger d-flex justify-content-center align-items-center">
+        <div class=" row-container row justify-content-center border rounded vh-70">
 
-            <div class="leftSide-login   vh-70 p-5 col-6">
+            <div class="leftSide-login  p-5 col-6">
                 <div class="logo d-flex mb-5 ">
                     <img src="./images/salaryos-logo (1).png" alt="">
                     <!-- <p class="text-white">SalaryOS</p> -->
@@ -89,7 +93,7 @@
                 </div>
 
             </div>
-            <div class="rightSide-login  w-60  vh-70 col-6 ">
+            <div class="rightSide-login  w-60  col-6 ">
                 <h2 class="fs-1 fw-bold">Welcome back</h2>
                 <p class="fs-3 mb-5">Sign in to access your payroll dashboard</p>
                 <form action="" validate>
@@ -98,7 +102,7 @@
                     <label for="pass" class="d-block mb-2 fs-5">Password</label>
                     <input type="password" name="password" id="pass" class="d-block form-control fs-4 text-secondray" placeholder="Enter your Password" required>
                     <p class="forgot-pass mt-1 fs-5 d-flex justify-content-end fw-bold">Forgot password?</p>
-                    <button type="submit" id="btn" class="btn btn-outline-custom btn-lg col-12 mb-4 mt-3 text-dark fs-4 fw-bold border border-dark">Sign in</button>
+                    <button type="submit" id="btn" class="btn  text-white btn-lg col-12 mb-4 mt-3 text-dark fs-4 fw-bold border border-dark">Sign in</button>
                     <p class="text-center fs-5"><span>Need access?</span> <span class="contact">Contact your administrator </span></p>
                 </form>
 

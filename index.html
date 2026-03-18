@@ -72,12 +72,23 @@
             background-color: white;
 
         }
+
         .info p:last-of-type {
             margin-top: -15px;
         }
-        .user-data{
+
+        .info {
+            transition: 0.3s;
+        }
+
+        .info:hover {
+            transform: translateY(-5px);
+        }
+
+        .user-data {
             background-color: white;
         }
+
         .add-btn {
             height: fit-content;
         }
@@ -150,30 +161,38 @@
 
             </div>
 
-            <div class="row emp-info mt-4 mx-4 gap-4 justify-content-between ">
-                <div class="info col-6 col-lg-6  col-sm-12 p-4 rounded-4 ">
-                    <div class="stat-icon mb-2 p-3 rounded-3 text-center " style="background:var(--primary-blue-tint); font-size:22px;width: fit-content; height: fit-content; ;">👥</div>
+            <div class="row emp-info mt-4 mx-4 gap-2">
+                <div class="info  col-lg-3 col-md-6 col-12 p-4 rounded-4 ">
+                    <div class="stat-icon mb-2 p-3 rounded-3 text-center "
+                        style="background:var(--primary-blue-tint); font-size:22px;width: fit-content; height: fit-content; ;">
+                        👥</div>
                     <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">0</p>
                     <p class="fs-5">Total Empoloyess</p>
                 </div>
-                <div class="info col-6 p-4 rounded-4 ">
-                    <div class="stat-icon mb-2 p-3 rounded-3 text-center " style="background:var(--green-tint); font-size:22px;width: fit-content; height: fit-content; ;">💰</div>
+                <div class="info col-lg-3 col-md-6 col-12 p-4 rounded-4 ">
+                    <div class="stat-icon mb-2 p-3 rounded-3 text-center "
+                        style="background:var(--green-tint); font-size:22px;width: fit-content; height: fit-content; ;">
+                        💰</div>
                     <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
                     <p class="fs-5">Total Gross Payroll</p>
                 </div>
-                <div class="info col-6 p-4 rounded-4 ">
-                    <div class="stat-icon mb-2 p-3 rounded-3 text-center " style="background:var(--amber-tint); font-size:22px;width: fit-content; height: fit-content; ;">⭐</div>
+                <div class="info  col-lg-3 col-md-6 col-12 p-4 rounded-4 ">
+                    <div class="stat-icon mb-2 p-3 rounded-3 text-center "
+                        style="background:var(--amber-tint); font-size:22px;width: fit-content; height: fit-content; ;">
+                        ⭐</div>
                     <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
                     <p class="fs-5">Total Bonuses</p>
                 </div>
-                <div class="info col-6 p-4 rounded-4 ">
-                    <div class="stat-icon mb-2 p-3 rounded-3 text-center " style="background:var(--primary-blue-tint); font-size:22px;width: fit-content; height: fit-content; ;">💵</div>
+                <div class="info col-lg-3 col-md-6 col-12 p-4 rounded-4 ">
+                    <div class="stat-icon mb-2 p-3 rounded-3 text-center "
+                        style="background:var(--primary-blue-tint); font-size:22px;width: fit-content; height: fit-content; ;">
+                        💵</div>
                     <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
                     <p class="fs-5">Total Net Salary</p>
                 </div>
-                
-                
-                
+
+
+
 
             </div>
 
@@ -182,39 +201,48 @@
                 <div class="row">
                     <div class="d-flex flex-column col-3">
                         <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text" class="form-control p-2" id="fullname" name="fullname" placeholder="e.g. Fatma Emad">
+                        <input type="text" class="form-control p-2" id="fullname" name="fullname"
+                            placeholder="e.g. Fatma Emad">
                     </div>
-                     <div class="d-flex flex-column col-3">
-                        <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text"  class="form-control p-2" id="fullname" name="fullname" placeholder="e.g. 5000">
+                    <div class="d-flex flex-column col-3">
+                        <label for="fullname" class="mb-2">Basic Salary *</label>
+                        <input type="text" class="form-control p-2" id="fullname" name="fullname"
+                            placeholder="e.g. 5000">
                     </div>
-                     <div class="d-flex flex-column col-2">
-                        <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text" class="form-control p-2" id="fullname" name="fullname" placeholder="e.g. 300">
+                    <div class="d-flex flex-column col-2">
+                        <label for="fullname" class="mb-2">Bonus *</label>
+                        <input type="text" class="form-control p-2" id="fullname" name="fullname"
+                            placeholder="e.g. 300">
                     </div>
-                     <div class="d-flex flex-column col-2">
+                    <div class="d-flex flex-column col-2">
                         <label for="fullname" class="mb-2">FULL NAME *</label>
                         <input type="text" class="form-control p-2" id="fullname" name="fullname" placeholder="e.g. 0">
                     </div>
-                     <div class="d-flex flex-column col-2" >
+                    <div class="d-flex flex-column col-2">
                         <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text"class="form-control p-2" id="fullname" name="fullname" placeholder="e.g. 8">
+                        <input type="text" class="form-control p-2" id="fullname" name="fullname" placeholder="e.g. 8">
                     </div>
-                    
+
 
 
                 </div>
                 <div class="row mt-3 mb-4">
                     <div class="d-flex flex-column col-3">
                         <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text" class="form-control p-2" id="fullname" name="fullname" placeholder="e.g. Fatma Emad">
+                        <input type="text" class="form-control p-2" id="fullname" name="fullname"
+                            placeholder="e.g. Fatma Emad">
                     </div>
-                     <div class="d-flex flex-column col-3">
+                    <div class="d-flex flex-column col-3">
                         <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text"  class="form-control p-2" id="fullname" name="fullname" placeholder="e.g. 5000">
+                        <input type="text" class="form-control p-2" id="fullname" name="fullname"
+                            placeholder="e.g. 5000">
                     </div>
-                    <button type="reset" class=" add-btn col-2 btn btn-primary btn-lg mt-auto"> + Add Employee</button>
-                    
+                    <button type="submit" class=" add-btn col-2 btn btn-primary fs-5 mt-auto me-2"> + Add Employee</button>
+                    <button type="reset" class=" add-btn col-1 btn btn-outline-danger btn-lg fs-6 mt-auto">
+                        <i class="bi bi-trash"></i>
+                         Clear All
+                    </button>
+
 
 
                 </div>
