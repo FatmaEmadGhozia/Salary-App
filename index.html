@@ -93,6 +93,10 @@
         .data-table {
             background-color: white;
         }
+        .delete-btn:hover {
+            color: var(--red-mid);
+            background-color: var(--red-tint);
+        }
     </style>
 </head>
 
@@ -240,25 +244,27 @@
                     <div class="d-flex flex-column col-3">
                         <label for="fullname" class="mb-2">FULL NAME *</label>
                         <input type="text" class="form-control p-2" id="fullname" name="fullname"
-                            placeholder="e.g. Fatma Emad">
+                            placeholder="e.g. Fatma Emad" required>
                     </div>
                     <div class="d-flex flex-column col-3">
                         <label for="fullname" class="mb-2">Basic Salary *</label>
-                        <input type="text" class="form-control p-2" id="fullname" name="fullname"
-                            placeholder="e.g. 5000">
+                        <input type="number" class="form-control p-2" id="fullname" name="fullname"
+                            placeholder="e.g. 5000" required>
                     </div>
                     <div class="d-flex flex-column col-2">
                         <label for="fullname" class="mb-2">Bonus *</label>
-                        <input type="text" class="form-control p-2" id="fullname" name="fullname"
+                        <input type="number" class="form-control p-2" id="fullname" name="fullname"
                             placeholder="e.g. 300">
                     </div>
                     <div class="d-flex flex-column col-2">
-                        <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text" class="form-control p-2" id="fullname" name="fullname" placeholder="e.g. 0">
+                        <label for="fullname" class="mb-2">Penalty</label>
+                        <input type="number" class="form-control p-2" id="fullname" name="fullname"
+                            placeholder="e.g. 0">
                     </div>
                     <div class="d-flex flex-column col-2">
-                        <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text" class="form-control p-2" id="fullname" name="fullname" placeholder="e.g. 8">
+                        <label for="fullname" class="mb-2">Extra Hours</label>
+                        <input type="number" class="form-control p-2" id="fullname" name="fullname"
+                            placeholder="e.g. 8">
                     </div>
 
 
@@ -266,16 +272,23 @@
                 </div>
                 <div class="row mt-3 mb-4">
                     <div class="d-flex flex-column col-3">
-                        <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text" class="form-control p-2" id="fullname" name="fullname"
-                            placeholder="e.g. Fatma Emad">
+                        <label for="fullname" class="mb-2">Job Title</label>
+                        <select name="job-title" id="title" class="form-select p-2 ">
+                            <option value="Salesman">Salesman</option>
+                            <option value="Operator">Operator</option>
+                            <option value="Admin">Admin</option>
+                        </select>
                     </div>
                     <div class="d-flex flex-column col-3">
-                        <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text" class="form-control p-2" id="fullname" name="fullname"
-                            placeholder="e.g. 5000">
+                        <label for="fullname" class="mb-2">Currency</label>
+                        <select name="job-title" id="title" class="form-select p-2 ">
+                            <option value="Salesman">USD - $</option>
+                            <option value="Operator">EGP</option>
+                            <option value="Admin">SAR</option>
+                        </select>
                     </div>
-                    <button type="submit" class=" add-btn col-2 btn btn-primary fs-5 mt-auto me-2"> + Add
+                    <button type="submit" class=" add-btn col-2 btn btn-primary fs-5 mt-auto me-2"> <i
+                            class="bi bi-plus"></i> Add
                         Employee</button>
                     <button type="reset" class=" add-btn col-1 btn btn-outline-danger btn-lg fs-6 mt-auto">
                         <i class="bi bi-trash"></i>
@@ -322,8 +335,9 @@
                             <tr>
                                 <td>
                                     <div class="d-flex align-items-center gap-2">
-                                        <div class="av rounded-circle" style="background:#B5D4F4; color:#0C447C;padding:2px 5px">FE</div>
-                                        <span style="font-weight:500;">Ahmed Karim</span>
+                                        <div class="av rounded-circle"
+                                            style="background:#B5D4F4; color:#0C447C;padding:2px 5px">FE</div>
+                                        <span style="font-weight:500;">Fatma Emad</span>
                                     </div>
                                 </td>
                                 <td><span class="badge-op">Operator</span></td>
@@ -342,7 +356,33 @@
                                 </td>
                                 <td style="color:#A32D2D;">-$450</td>
                                 <td style="font-weight:700; color:#0C447C;">$4,050</td>
-                                <td><button class="btn-del"><i class="bi bi-trash"></i></button></td>
+                                <td><button class="delete-btn border-0 px-2"><i class="bi bi-trash "></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="av rounded-circle"
+                                            style="background:#B5D4F4; color:#0C447C;padding:2px 5px">FE</div>
+                                        <span style="font-weight:500;">Fatma Emad</span>
+                                    </div>
+                                </td>
+                                <td><span class="badge-op">Operator</span></td>
+                                <td><span
+                                        style="font-size:12px; background:#f1efe8; color:#666; padding:2px 8px; border-radius:12px; font-weight:600;">USD</span>
+                                </td>
+                                <td>$4,000</td>
+                                <td style="color:#0F6E56; font-weight:500;">+$300</td>
+                                <td style="color:#aaa;">$0</td>
+                                <td style="color:#3C3489; font-weight:600;">8 hrs</td>
+                                <td>$25</td>
+                                <td>$200</td>
+                                <td style="font-weight:600;">$4,500</td>
+                                <td><span
+                                        style="font-size:12px; background:#FAEEDA; color:#854F0B; padding:2px 8px; border-radius:12px; font-weight:600;">10%</span>
+                                </td>
+                                <td style="color:#A32D2D;">-$450</td>
+                                <td style="font-weight:700; color:#0C447C;">$4,050</td>
+                                <td><button class="delete-btn border-0 px-2"><i class="bi bi-trash "></i></button></td>
                             </tr>
                         </tbody>
                         <tfoot></tfoot>
@@ -379,6 +419,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/functions.js"></script>
 </body>
 
 </html>
