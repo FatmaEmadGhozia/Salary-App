@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,408 +19,245 @@
             --primary-blue-light: #85B7EB;
             --primary-blue-tint: #E6F1FB;
             --primary-blue-avatar: #B5D4F4;
+            --green-tint: #E6F7F2;
+            --amber-tint: #FEF3E2;
+            --red-tint: #FDECEA;
+            --red-mid: #dc3545;
+            --bg-page: #F4F6FA;
         }
 
-        .contain img {
-            width: 150px;
-            height: 50px;
-            padding-left: 20px;
-        }
+        body { background-color: var(--bg-page); }
 
-        .navbar {
-            background-color: var(--primaryColor);
-        }
-
-        .list ul {
-            margin-left: 250px;
-        }
+        .contain img { width: 150px; height: 50px; padding-left: 20px; }
+        .navbar { background-color: var(--primaryColor); }
+        .list ul { margin-left: 250px; }
 
         .profile {
             background-color: var(--secondaryColor);
-            width: 40px;
-            height: 40px;
-            text-align: center;
+            width: 40px; height: 40px; text-align: center;
         }
+        .role { color: #F09595; background: rgba(226,75,74,0.2); }
 
-        .role {
-            color: #F09595;
-            background: rgba(226, 75, 74, 0.2);
-        }
+        .admin-dashboard { color: var(--primary-navy-hover); }
 
-        .emp-num,
-        .total-net {
-            width: 200px;
-            background-color: var(--secondaryColor);
-            height: fit-content;
-            width: fit-content;
-            font-weight: 500;
-        }
-
-        .emp-num span:last-of-type,
-        .total-net span:last-of-type {
-            margin-top: -10px;
-        }
-
-        .admin-dashboard {
-            color: var(--primary-navy-hover);
-
-        }
-
+        /* ── stat cards ── */
         .info {
-            min-height: 200px;
+            min-height: 160px;
             background-color: white;
             transition: 0.3s;
-            width: 320px;
+            border-radius: 1rem;
+        }
+        .info:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,.08); }
+        .info p:last-of-type { margin-top: -10px; }
+
+        /* ── form section ── */
+        .user-data { background-color: white; }
+        .add-btn   { height: fit-content; }
+
+        /* ── table ── */
+        .data-table { background-color: white; }
+        .delete-btn { background: transparent; }
+        .delete-btn:hover { color: var(--red-mid); background-color: var(--red-tint); border-radius: 4px; }
+
+        /* ── currency converting badge ── */
+        .converting-badge {
+            font-size: 11px;
+            background: #fff3cd;
+            color: #856404;
+            padding: 2px 7px;
+            border-radius: 10px;
+            font-weight: 600;
         }
 
-        .info p:last-of-type {
-            margin-top: -15px;
-        }
-
-
-
-        .info:hover {
-            transform: translateY(-5px);
-        }
-
-        .user-data {
-            background-color: white;
-        }
-
-        .add-btn {
-            height: fit-content;
-        }
-
-        .data-table {
-            background-color: white;
-        }
-        .delete-btn:hover {
-            color: var(--red-mid);
-            background-color: var(--red-tint);
-        }
+        /* ── spacing fix: gap between stat cards row and form ── */
+        .section-gap { margin-top: 2rem; }
     </style>
 </head>
 
-<body style="background-color: var(--bg-page);">
+<body>
 
-    <nav class="navbar navbar-expand-xl ">
-        <div class=" contain container-fluid p-2">
-            <!-- <a class="navbar-brand" href="#">Navbar scroll</a> -->
-            <img src="./images/salaryos-logo (1).png" alt="" class="">
+
+    <nav class="navbar navbar-expand-xl">
+        <div class="contain container-fluid p-2">
+            <img src="./images/salaryos-logo (1).png" alt="">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class=" list collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll gap-3" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white fs-3" aria-current="page" href="#">DashBoard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fs-3" href="#">Employees</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active text-white fs-3" aria-current="page" href="#">Reports</a>
-
-
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active text-white fs-3" aria-current="page" href="#">Payroll</a>
-
-
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled text-white fs-3" aria-disabled="true">Settings</a>
-                    </li>
+            <div class="list collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll gap-3" style="--bs-scroll-height:100px;">
+                    <li class="nav-item"><a class="nav-link active text-white fs-3" href="#">DashBoard</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-3" href="#">Employees</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-3" href="#">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-3" href="#">Payroll</a></li>
+                    <li class="nav-item"><a class="nav-link disabled text-white fs-3">Settings</a></li>
                 </ul>
-
-                <div class="d-flex justify-content-center gap-3 me-3">
+                <div class="d-flex justify-content-center align-items-center gap-3 me-3">
                     <i class="bi bi-bell fs-3 text-white"></i>
-                    <div class=" role  rounded-3 p-1  d-inline-block fs-4">Admin</div>
-                    <div class="profile text-white p-1 fs-5 fw-bold rounded-circle d-inline-block">FA</div>
-
+                    <div class="role rounded-3 p-1 d-inline-block fs-5" id="nav-username">Admin</div>
+                    <div class="profile text-white p-1 fs-5 fw-bold rounded-circle d-inline-block" id="nav-avatar">FA</div>
+                    <button class="btn btn-sm btn-outline-light" onclick="logout()">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
+
     <main>
         <div class="main-container">
-            <div class="main-header">
-                <div class="main-description d-flex justify-content-between px-4">
-                    <div>
-                        <h2 class=" admin-dashboard mb-1 mt-4 fs-1 fw-bold">Admin Dashboard</h2>
-                        <p class="fs-4">Tuesday, March 17, 2026 · Q1 Payroll Period</p>
-                    </div>
-                    <div class="d-flex align-items-center gap-5 mt-4 fs-4 rounded-2 text-light">
-                        <div class="emp-num  rounded-2 p-3  bg-light text-dark ">
 
-                            <span class="d-block ">Export Report</span>
-                        </div>
-                        <!-- <div class="total-net rounded-2 p-2 text-center fs-4 text-light">
-                            <span class="d-block"> $14,500</span>
-                            <span class="d-block">Total Net</span>
-                        </div> -->
-                    </div>
+            <!-- ══ Header ═══════════════════════════════════════════════════ -->
+            <div class="main-description d-flex justify-content-between px-4 mt-4 mb-2">
+                <div>
+                    <h2 class="admin-dashboard mb-1 fs-1 fw-bold">Admin Dashboard</h2>
+                    <p class="fs-5 text-muted" id="payroll-date"></p>
                 </div>
-
-
-
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-outline-secondary" onclick="exportReport()">
+                        <i class="bi bi-download me-1"></i> Export Report
+                    </button>
+                </div>
             </div>
-            <!-- 
-            <div class="row emp-info mt-4 mx-4 g-2 ">
-                <div class="info  col-lg-3 col-md-6 col-12 p-4 rounded-4 ">
-                    <div class="stat-icon mb-2 p-3 rounded-3 text-center "
-                        style="background:var(--primary-blue-tint); font-size:22px;width: fit-content; height: fit-content; ;">
-                        👥</div>
-                    <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">0</p>
-                    <p class="fs-5">Total Empoloyess</p>
-                </div>
-                <div class="info col-lg-3 col-md-6 col-12 p-4 rounded-4 ">
-                    <div class="stat-icon mb-2 p-3 rounded-3 text-center "
-                        style="background:var(--green-tint); font-size:22px;width: fit-content; height: fit-content; ;">
-                        💰</div>
-                    <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
-                    <p class="fs-5">Total Gross Payroll</p>
-                </div>
-                <div class="info  col-lg-3 col-md-6 col-12 p-4 rounded-4 ">
-                    <div class="stat-icon mb-2 p-3 rounded-3 text-center "
-                        style="background:var(--amber-tint); font-size:22px;width: fit-content; height: fit-content; ;">
-                        ⭐</div>
-                    <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
-                    <p class="fs-5">Total Bonuses</p>
-                </div>
-                <div class="info col-lg-3 col-md-6 col-12 p-4 rounded-4 ">
-                    <div class="stat-icon mb-2 p-3 rounded-3 text-center "
-                        style="background:var(--primary-blue-tint); font-size:22px;width: fit-content; height: fit-content; ;">
-                        💵</div>
-                    <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
-                    <p class="fs-5">Total Net Salary</p>
-                </div>
 
-
-
-
-            </div> -->
-
+            <!-- ══ Stat Cards ════════════════════════════════════════════════ -->
             <div class="mx-4">
-                <div class="row emp-info mt-4 gap-2">
-                    <div class="info col-lg-3 col-md-6 col-12 p-4 rounded-4">
-                        <div class="stat-icon mb-2 px-3 py-2  rounded-3 text-center"
-                            style="background:var(--primary-blue-tint); font-size:22px; width:fit-content;">
+                <div class="row emp-info g-3">
+                    <div class="info col-lg-3 col-md-6 col-12 p-4">
+                        <div class="stat-icon mb-2 px-3 py-2 rounded-3" style="background:var(--primary-blue-tint); font-size:22px; width:fit-content;">
                             <i class="bi bi-people-fill" style="color:#185FA5;"></i>
                         </div>
-                        <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">0</p>
-                        <p class="fs-5">Total Employees</p>
+                        <p class="fs-1 fw-bold mb-1" style="color:var(--primary-navy-hover);" id="total-emp">0</p>
+                        <p class="fs-5 text-muted mb-0">Total Employees</p>
                     </div>
-                    <div class="info col-lg-3 col-md-6 col-12 p-4 rounded-4">
-                        <div class="stat-icon mb-2 px-3 py-2 rounded-3 text-center"
-                            style="background:var(--green-tint); font-size:22px; width:fit-content;">
+                    <div class="info col-lg-3 col-md-6 col-12 p-4">
+                        <div class="stat-icon mb-2 px-3 py-2 rounded-3" style="background:var(--green-tint); font-size:22px; width:fit-content;">
                             <i class="bi bi-wallet2" style="color:#0F6E56;"></i>
                         </div>
-                        <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
-                        <p class="fs-5">Total Gross Payroll</p>
+                        <p class="fs-1 fw-bold mb-1" style="color:var(--primary-navy-hover);" id="total-gross">0</p>
+                        <p class="fs-5 text-muted mb-0">Total Gross Payroll <span style="font-size:11px;">(EGP)</span></p>
                     </div>
-                    <div class="info col-lg-3 col-md-6 col-12 p-4 rounded-4">
-                        <div class="stat-icon mb-2 px-3 py-2 rounded-3 text-center"
-                            style="background:var(--amber-tint); font-size:22px; width:fit-content;">
+                    <div class="info col-lg-3 col-md-6 col-12 p-4">
+                        <div class="stat-icon mb-2 px-3 py-2 rounded-3" style="background:var(--amber-tint); font-size:22px; width:fit-content;">
                             <i class="bi bi-star-fill" style="color:#854F0B;"></i>
                         </div>
-                        <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
-                        <p class="fs-5">Total Bonuses</p>
+                        <p class="fs-1 fw-bold mb-1" style="color:var(--primary-navy-hover);" id="total-bonuses">0</p>
+                        <p class="fs-5 text-muted mb-0">Total Bonuses <span style="font-size:11px;">(EGP)</span></p>
                     </div>
-                    <div class="info col-lg-3 col-md-6 col-12 p-4 rounded-4">
-                        <div class="stat-icon mb-2 px-3 py-2 rounded-3 text-center"
-                            style="background:var(--primary-blue-tint); font-size:22px; width:fit-content;">
+                    <div class="info col-lg-3 col-md-6 col-12 p-4">
+                        <div class="stat-icon mb-2 px-3 py-2 rounded-3" style="background:var(--primary-blue-tint); font-size:22px; width:fit-content;">
                             <i class="bi bi-cash-stack" style="color:#0C447C;"></i>
                         </div>
-                        <p class="fs-1 fw-bold" style="color: var(--primary-navy-hover);">$0</p>
-                        <p class="fs-5">Total Net Salary</p>
+                        <p class="fs-1 fw-bold mb-1" style="color:var(--primary-navy-hover);" id="total-net">0</p>
+                        <p class="fs-5 text-muted mb-0">Total Net Salary <span style="font-size:11px;">(EGP)</span></p>
                     </div>
                 </div>
             </div>
 
-            <div class="user-data w-full p-3 w-500 mt-5 rounded-4 mb-5 mx-4 ">
-                <p>Add New Employee</p>
-                <div class="row">
-                    <div class="d-flex flex-column col-3">
-                        <label for="fullname" class="mb-2">FULL NAME *</label>
-                        <input type="text" class="form-control p-2" id="fullname" name="fullname"
-                            placeholder="e.g. Fatma Emad" required>
-                    </div>
-                    <div class="d-flex flex-column col-3">
-                        <label for="fullname" class="mb-2">Basic Salary *</label>
-                        <input type="number" class="form-control p-2" id="fullname" name="fullname"
-                            placeholder="e.g. 5000" required>
-                    </div>
-                    <div class="d-flex flex-column col-2">
-                        <label for="fullname" class="mb-2">Bonus *</label>
-                        <input type="number" class="form-control p-2" id="fullname" name="fullname"
-                            placeholder="e.g. 300">
-                    </div>
-                    <div class="d-flex flex-column col-2">
-                        <label for="fullname" class="mb-2">Penalty</label>
-                        <input type="number" class="form-control p-2" id="fullname" name="fullname"
-                            placeholder="e.g. 0">
-                    </div>
-                    <div class="d-flex flex-column col-2">
-                        <label for="fullname" class="mb-2">Extra Hours</label>
-                        <input type="number" class="form-control p-2" id="fullname" name="fullname"
-                            placeholder="e.g. 8">
+            <!-- ══ Add Employee Form ══════════════════════════════════════════ -->
+            <div class="user-data w-full p-4 mt-4 rounded-4 mb-4 mx-4 section-gap">
+                <p class="fs-5 fw-semibold mb-3">Add New Employee</p>
+                <form id="emp-form" method="post">
+                    <div class="row g-3">
+                        <div class="d-flex flex-column col-lg-3 col-md-12">
+                            <label for="fullname" class="mb-2">FULL NAME *</label>
+                            <input type="text" class="form-control p-2" id="fullname" placeholder="e.g. Fatma Emad">
+                        </div>
+                        <div class="d-flex flex-column col-lg-3 col-md-12">
+                            <label for="salary" class="mb-2">Basic Salary *</label>
+                            <input type="number" class="form-control p-2" id="salary" placeholder="e.g. 5000">
+                        </div>
+                        <div class="d-flex flex-column col-lg-2 col-md-12">
+                            <label for="bonus" class="mb-2">Bonus *</label>
+                            <input type="number" class="form-control p-2" id="bonus" placeholder="e.g. 300">
+                        </div>
+                        <div class="d-flex flex-column col-lg-2 col-md-12">
+                            <label for="penalty" class="mb-2">Penalty</label>
+                            <input type="number" class="form-control p-2" id="penalty" placeholder="e.g. 0">
+                        </div>
+                        <div class="d-flex flex-column col-lg-2 col-md-12">
+                            <label for="extra-hours" class="mb-2">Extra Hours</label>
+                            <input type="number" class="form-control p-2" id="extra-hours" placeholder="e.g. 8">
+                        </div>
                     </div>
 
-
-
-                </div>
-                <div class="row mt-3 mb-4">
-                    <div class="d-flex flex-column col-3">
-                        <label for="fullname" class="mb-2">Job Title</label>
-                        <select name="job-title" id="title" class="form-select p-2 ">
-                            <option value="Salesman">Salesman</option>
-                            <option value="Operator">Operator</option>
-                            <option value="Admin">Admin</option>
-                        </select>
+                    <div class="row g-3 mt-1 align-items-end">
+                        <div class="d-flex flex-column col-lg-3 col-md-12">
+                            <label for="title" class="mb-2">Job Title</label>
+                            <select id="title" class="form-select p-2">
+                                <option value="Salesman">Salesman</option>
+                                <option value="Operator">Operator</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                        </div>
+                        <div class="d-flex flex-column col-lg-3 col-md-12">
+                            <label for="currency" class="mb-2">Currency</label>
+                            <select id="currency" class="form-select p-2">
+                                <option value="EGP">EGP</option>
+                                <option value="USD">USD - $</option>
+                                <option value="SAR">SAR</option>
+                                <option value="EUR">EUR - €</option>
+                                <option value="GBP">GBP - £</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <button type="button" class="add-btn btn btn-primary fs-5 w-100" id="add-emp-btn">
+                                <i class="bi bi-plus"></i> Add Employee
+                            </button>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <button type="reset" class="btn btn-outline-danger fs-5 w-100">
+                                <i class="bi bi-trash"></i> Clear
+                            </button>
+                        </div>
                     </div>
-                    <div class="d-flex flex-column col-3">
-                        <label for="fullname" class="mb-2">Currency</label>
-                        <select name="job-title" id="title" class="form-select p-2 ">
-                            <option value="Salesman">USD - $</option>
-                            <option value="Operator">EGP</option>
-                            <option value="Admin">SAR</option>
-                        </select>
-                    </div>
-                    <button type="submit" class=" add-btn col-2 btn btn-primary fs-5 mt-auto me-2"> <i
-                            class="bi bi-plus"></i> Add
-                        Employee</button>
-                    <button type="reset" class=" add-btn col-1 btn btn-outline-danger btn-lg fs-6 mt-auto">
-                        <i class="bi bi-trash"></i>
-                        Clear All
-                    </button>
-
-
-
-                </div>
-
-
-
+                </form>
             </div>
 
-            <div class="data-table mx-4 p-4 rounded-4 ">
-                <div class="d-flex justify-content-between">
-                    <span class="fs-6"> <i class="bi bi-table me-1" style="color:#0C447C;"></i>
-                        Employee Records
+            <!-- ══ Data Table ════════════════════════════════════════════════ -->
+            <div class="data-table mx-4 p-4 rounded-4 mb-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fs-6 fw-semibold">
+                        <i class="bi bi-table me-1" style="color:#0C447C;"></i> Employee Records
                     </span>
-                    <span class="fs-6 p-1 rounded-3 fw-bold"
-                        style="background:var(--primary-blue-tint); color:#0C447C;">0 employees</span>
+                    <span class="fs-6 p-1 px-2 rounded-3 fw-bold"
+                        style="background:var(--primary-blue-tint); color:#0C447C;">
+                        <span class="empNum">0</span> employees
+                    </span>
                 </div>
-                <div>
-                    <table class="table  ">
-                        <thead style="background:var(--primary-blue-light) !important;">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead style="background:var(--primary-blue-light);">
                             <tr>
                                 <th>Name</th>
                                 <th>Job Title</th>
                                 <th>Currency</th>
-                                <th>Basic</th>
-                                <th>Bonus</th>
+                                <th>Basic (EGP)</th>
+                                <th>Bonus (EGP)</th>
                                 <th>Penalty</th>
                                 <th>Extra Hrs</th>
                                 <th>Hr Value</th>
                                 <th>Extra Total</th>
-                                <th>Gross</th>
+                                <th>Gross (EGP)</th>
                                 <th>Tax %</th>
                                 <th>Tax Value</th>
-                                <th>Net Salary</th>
+                                <th>Net Salary (EGP)</th>
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <div class="av rounded-circle"
-                                            style="background:#B5D4F4; color:#0C447C;padding:2px 5px">FE</div>
-                                        <span style="font-weight:500;">Fatma Emad</span>
-                                    </div>
-                                </td>
-                                <td><span class="badge-op">Operator</span></td>
-                                <td><span
-                                        style="font-size:12px; background:#f1efe8; color:#666; padding:2px 8px; border-radius:12px; font-weight:600;">USD</span>
-                                </td>
-                                <td>$4,000</td>
-                                <td style="color:#0F6E56; font-weight:500;">+$300</td>
-                                <td style="color:#aaa;">$0</td>
-                                <td style="color:#3C3489; font-weight:600;">8 hrs</td>
-                                <td>$25</td>
-                                <td>$200</td>
-                                <td style="font-weight:600;">$4,500</td>
-                                <td><span
-                                        style="font-size:12px; background:#FAEEDA; color:#854F0B; padding:2px 8px; border-radius:12px; font-weight:600;">10%</span>
-                                </td>
-                                <td style="color:#A32D2D;">-$450</td>
-                                <td style="font-weight:700; color:#0C447C;">$4,050</td>
-                                <td><button class="delete-btn border-0 px-2"><i class="bi bi-trash "></i></button></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <div class="av rounded-circle"
-                                            style="background:#B5D4F4; color:#0C447C;padding:2px 5px">FE</div>
-                                        <span style="font-weight:500;">Fatma Emad</span>
-                                    </div>
-                                </td>
-                                <td><span class="badge-op">Operator</span></td>
-                                <td><span
-                                        style="font-size:12px; background:#f1efe8; color:#666; padding:2px 8px; border-radius:12px; font-weight:600;">USD</span>
-                                </td>
-                                <td>$4,000</td>
-                                <td style="color:#0F6E56; font-weight:500;">+$300</td>
-                                <td style="color:#aaa;">$0</td>
-                                <td style="color:#3C3489; font-weight:600;">8 hrs</td>
-                                <td>$25</td>
-                                <td>$200</td>
-                                <td style="font-weight:600;">$4,500</td>
-                                <td><span
-                                        style="font-size:12px; background:#FAEEDA; color:#854F0B; padding:2px 8px; border-radius:12px; font-weight:600;">10%</span>
-                                </td>
-                                <td style="color:#A32D2D;">-$450</td>
-                                <td style="font-weight:700; color:#0C447C;">$4,050</td>
-                                <td><button class="delete-btn border-0 px-2"><i class="bi bi-trash "></i></button></td>
-                            </tr>
-                        </tbody>
+                        <tbody></tbody>
                         <tfoot></tfoot>
                     </table>
-                    <div class="empty-data">
-                        <div>
-
-                        </div>
-
-                    </div>
-
-
-
-
-
-
-
                 </div>
-
-
-
-
-
-
-
-
-
             </div>
 
+        </div>
     </main>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
     <script src="./js/functions.js"></script>
+    <script src="./js/main.js"></script>
 </body>
-
 </html>
