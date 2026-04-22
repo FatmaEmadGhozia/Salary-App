@@ -7,13 +7,14 @@
     <title>LOGIN PAGE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <style>
         :root {
             --primaryColor: #0C447C;
             --secondaryColor: #378ADD;
         }
-      
+
         .row-container {
             box-shadow: 6px 4px 8px rgba(29, 29, 29, 0.441);
             overflow: hidden;
@@ -23,7 +24,6 @@
         .logo img {
             width: 140px;
             height: 55px;
-
         }
 
         .leftSide-login {
@@ -42,70 +42,158 @@
             margin-top: -23px;
             color: var(--secondaryColor);
         }
-        .rightSide-login{
-            padding: 100px 50px;
+
+        .rightSide-login {
+            padding: 60px 50px;
             background-color: white;
         }
+
         .forgot-pass {
             color: var(--secondaryColor);
             margin-left: auto;
-            
         }
-        #name,#pass {
+
+        #name,
+        #pass {
             border: 2px solid rgba(0, 0, 0, 0.142);
         }
+
+        #name:focus,
+        #pass:focus {
+            border-color: var(--secondaryColor);
+            box-shadow: 0 0 0 3px rgba(55, 138, 221, .15);
+        }
+
         .contact {
             color: var(--secondaryColor);
             font-weight: bold;
         }
-        .btn {
+
+        .btn-signin {
             background: var(--primaryColor);
             border: 0;
+            color: white;
         }
-        .btn:hover {
-            background-color:#0c447cdf;
-            
+
+        .btn-signin:hover {
+            background-color: #0c447cdf;
+            color: white;
+        }
+
+
+        .login-alert {
+            font-size: 14px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            display: none;
+            margin-bottom: 16px;
+        }
+
+        .login-alert.error {
+            background: #FDECEA;
+            color: #A32D2D;
+            border: 1px solid #f5c6cb;
+        }
+
+        .login-alert.success {
+            background: #E6F7F2;
+            color: #0F6E56;
+            border: 1px solid #b7e3d5;
+        }
+
+
+        .pass-wrapper {
+            position: relative;
+        }
+
+        .pass-wrapper input {
+            padding-right: 48px;
+        }
+
+        .toggle-pass {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 0;
+        }
+
+        .toggle-pass:hover {
+            color: var(--primaryColor);
+        }
+
+
+        .btn-signin .spinner-border {
+            width: 1.1rem;
+            height: 1.1rem;
+            border-width: 2px;
         }
     </style>
 </head>
 
 <body class="bg-light">
 
-    <div class="container  min-vh-100 border border-danger d-flex justify-content-center align-items-center">
-        <div class=" row-container row justify-content-center border rounded vh-70">
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+        <div class="row-container row justify-content-center border rounded">
 
-            <div class="leftSide-login  p-5 col-6">
-                <div class="logo d-flex mb-5 ">
+
+            <div class="leftSide-login p-5 col-6">
+                <div class="logo d-flex mb-5">
                     <img src="./images/salaryos-logo (1).png" alt="">
-                    <!-- <p class="text-white">SalaryOS</p> -->
                 </div>
                 <h1 class="text-white mt-2 mb-4">Manage <br>payroll with <br>precision</h1>
-                <p style="color:var(--secondaryColor)" class="fs-4 mt-2 ">A complete salary management platform for HR
-                    teams and finance departments.</p>
-                <div class="props   d-flex flex-wrap gap-3 mb-5 mt-2">
+                <p style="color:var(--secondaryColor)" class="fs-4 mt-2">
+                    A complete salary management platform for HR teams and finance departments.
+                </p>
+                <div class="props d-flex flex-wrap gap-3 mb-5 mt-2">
                     <div class="prop text-white border rounded p-1 border-0 fs-5">Secure</div>
-                    <div class="prop text-white  border rounded p-1 border-0 fs-5">Real-time</div>
+                    <div class="prop text-white border rounded p-1 border-0 fs-5">Real-time</div>
                     <div class="prop text-white border rounded p-1 border-0 fs-5">Multi-currency</div>
                 </div>
                 <div class="leftSide-footer">
                     <p class="text-white fs-1 fw-bold">4,200+</p>
                     <p class="text-white fs-4">Employees managed</p>
                 </div>
-
             </div>
-            <div class="rightSide-login  w-60  col-6 ">
-                <h2 class="fs-1 fw-bold">Welcome back</h2>
-                <p class="fs-3 mb-5">Sign in to access your payroll dashboard</p>
-                <form action="" validate>
-                    <label for="name" class="d-block mb-2 fs-5">USERNAME</label>
-                    <input type="text" name="username" id="name" class="d-block form-control mb-3 fs-4 text-secondray p-2 ps-3  " placeholder="Enter your username" required>
-                    <label for="pass" class="d-block mb-2 fs-5">Password</label>
-                    <input type="password" name="password" id="pass" class="d-block form-control fs-4 text-secondray" placeholder="Enter your Password" required>
-                    <p class="forgot-pass mt-1 fs-5 d-flex justify-content-end fw-bold">Forgot password?</p>
-                    <button type="submit" id="btn" class="btn  text-white btn-lg col-12 mb-4 mt-3 text-dark fs-4 fw-bold border border-dark">Sign in</button>
-                    <p class="text-center fs-5"><span>Need access?</span> <span class="contact">Contact your administrator </span></p>
-                </form>
 
+
+            <div class="rightSide-login col-6">
+                <h2 class="fs-1 fw-bold">Welcome back</h2>
+                <p class="fs-3 mb-4">Sign in to access your payroll dashboard</p>
+
+
+                <div class="login-alert" id="login-alert"></div>
+
+                <form id="login-form" onsubmit="handleLogin(event)">
+                    <label for="name" class="d-block mb-2 fs-5">USERNAME</label>
+                    <input type="text" id="name" class="d-block form-control mb-3 fs-4 p-2 ps-3"
+                        placeholder="Enter your username" autocomplete="username">
+
+                    <label for="pass" class="d-block mb-2 fs-5">Password</label>
+                    <div class="pass-wrapper mb-1">
+                        <input type="password" id="pass" class="d-block form-control fs-4 p-2 ps-3"
+                            placeholder="Enter your Password" autocomplete="current-password">
+                        <button type="button" class="toggle-pass" onclick="togglePass()">
+                            <i class="bi bi-eye" id="toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <p class="forgot-pass mt-1 fs-5 d-flex justify-content-end fw-bold mb-4">Forgot password?</p>
+
+                    <button type="submit" id="btn" class="btn-signin btn btn-lg col-12 mb-4 fs-4 fw-bold">
+                        Sign in
+                    </button>
+
+                    <p class="text-center fs-5">
+                        <span>Need access? </span>
+                        <span class="contact">Contact your administrator</span>
+                    </p>
+                </form>
             </div>
 
         </div>
@@ -114,7 +202,81 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/functions.js"></script>
+    <script>
+
+        if (sessionStorage.getItem('loggedIn') === 'true') {
+            window.location.href = './index.html';
+        }
+
+
+        initAccounts();
+
+
+        function showAlert(msg, type = 'error') {
+            const el = document.getElementById('login-alert');
+            el.textContent = msg;
+            el.className = 'login-alert ' + type;
+            el.style.display = 'block';
+        }
+
+
+        function togglePass() {
+            const input = document.getElementById('pass');
+            const icon = document.getElementById('toggle-icon');
+            const isPass = input.type === 'password';
+            input.type = isPass ? 'text' : 'password';
+            icon.className = isPass ? 'bi bi-eye-slash' : 'bi bi-eye';
+        }
+
+
+        function handleLogin(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const pass = document.getElementById('pass').value;
+
+            if (!name || !pass) {
+                showAlert('Please fill in both fields.');
+                return;
+            }
+
+            const btn = document.getElementById('btn');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border me-2"></span>Signing in...';
+
+          
+
+            setTimeout(() => {
+                const result = loginAccount(name, pass);
+
+                if (result.success) {
+
+                    showAlert('Login successful! Redirecting…', 'success');
+
+                    // ✅ save session
+                    sessionStorage.setItem('loggedIn', 'true');
+                    sessionStorage.setItem('username', name);
+                    sessionStorage.setItem('role', result.role);
+
+                    setTimeout(() => {
+                        if (result.role === 'admin') {
+                            window.location.href = './index.html';
+                        } else {
+                            localStorage.setItem('loggedinUser' , result.username)
+                            window.location.href = './profile.html';
+                        }
+                    }, 700);
+
+                } else {
+                    showAlert(result.message || 'Invalid username or password.');
+                    btn.disabled = false;
+                    btn.innerHTML = 'Sign in';
+                }
+
+            }, 500);
+        }
+    </script>
 </body>
 
 </html>
