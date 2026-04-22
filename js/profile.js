@@ -52,6 +52,7 @@ if (user) {
     document.getElementById('profile-bonus').textContent = user[4];
     document.getElementById('profile-net').textContent = user[12];
 }
+<<<<<<< HEAD
 
 
 
@@ -64,3 +65,5 @@ if (user) {
     document.getElementById('payroll-date').textContent =
         now.toLocaleDateString('en-US', opts) + ' · ' + quarter + ' Payroll Period';
 })();
+=======
+>>>>>>> 4c990c10cf4a094acbd07e57b5eef63a73af9382

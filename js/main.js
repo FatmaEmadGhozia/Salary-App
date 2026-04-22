@@ -87,8 +87,11 @@ document.getElementById('add-emp-btn').addEventListener('click', async function 
             rate = await getCurrencyRate(currency);
         }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4c990c10cf4a094acbd07e57b5eef63a73af9382
         const salary = convertToEGP(salaryRaw, rate);
         const bonus = convertToEGP(bonusRaw, rate);
         const penalty = convertToEGP(penaltyRaw, rate);
@@ -100,6 +103,7 @@ document.getElementById('add-emp-btn').addEventListener('click', async function 
         const tax = 0.1;
         const taxValue = parseFloat(TaxValue(gross, tax).toFixed(2));
         const netSalary = parseFloat(Netsalary(gross, taxValue).toFixed(2));
+<<<<<<< HEAD
         var extraTotalCopy = 0;
 
         switch (title) {
@@ -107,22 +111,36 @@ document.getElementById('add-emp-btn').addEventListener('click', async function 
             case 'Salesman': extraTotalCopy = extraTotal * 1.5; break;
             case 'Admin': extraTotalCopy = extraTotal * 2; break;
         }
+=======
+>>>>>>> 4c990c10cf4a094acbd07e57b5eef63a73af9382
 
         const employee = [
             fullname,     // 0
             title,        // 1
             currency,     // 2
+<<<<<<< HEAD
             salary,       // 3  
+=======
+            salary,       // 3  — in EGP
+>>>>>>> 4c990c10cf4a094acbd07e57b5eef63a73af9382
             bonus,        // 4
             penalty,      // 5
             extraHours,   // 6
             hrValue,      // 7
+<<<<<<< HEAD
             extraTotalCopy,   // 8
+=======
+            extraTotal,   // 8
+>>>>>>> 4c990c10cf4a094acbd07e57b5eef63a73af9382
             gross,        // 9
             tax,          // 10
             taxValue,     // 11
             netSalary,    // 12
+<<<<<<< HEAD
             rate          // 13 — 
+=======
+            rate          // 13 — conversion rate used
+>>>>>>> 4c990c10cf4a094acbd07e57b5eef63a73af9382
         ];
 
         const myData = JSON.parse(localStorage.getItem('show') || '[]');
@@ -253,6 +271,7 @@ updateStats();
 
 
 
+<<<<<<< HEAD
 document.getElementById('delete-all').addEventListener('click', clearAllData);
 
 
@@ -264,3 +283,5 @@ function clearAllData() {
         localStorage.removeItem('accounts'); 
  }
 }
+=======
+>>>>>>> 4c990c10cf4a094acbd07e57b5eef63a73af9382
