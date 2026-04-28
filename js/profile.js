@@ -52,6 +52,10 @@ if (user) {
     document.getElementById('profile-bonus').textContent = user[4];
     document.getElementById('profile-net').textContent = user[12];
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f32d2088fb81e28b5a2625327fed5b8cd67062c0
 
 
 
@@ -63,4 +67,10 @@ if (user) {
     const quarter = 'Q' + (Math.ceil((now.getMonth() + 1) / 3));
     document.getElementById('payroll-date').textContent =
         now.toLocaleDateString('en-US', opts) + ' · ' + quarter + ' Payroll Period';
+<<<<<<< HEAD
 })();
+=======
+})();
+=======
+>>>>>>> 4c990c10cf4a094acbd07e57b5eef63a73af9382
+>>>>>>> f32d2088fb81e28b5a2625327fed5b8cd67062c0
